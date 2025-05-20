@@ -1,0 +1,32 @@
+[
+  {
+    "topic": "audio-processing-events",
+    "partitions": 3,
+    "replicationFactor": 1,
+    "config": {
+      "cleanup.policy": "delete",
+      "retention.ms": "604800000"
+    },
+    "description": "Events for audio file uploads, processing, and status changes. Avro-encoded."
+  },
+  {
+    "topic": "audio-status-updates",
+    "partitions": 3,
+    "replicationFactor": 1,
+    "config": {
+      "cleanup.policy": "compact",
+      "min.cleanable.dirty.ratio": "0.1"
+    },
+    "description": "Status change events for audio files, used for monitoring and orchestration."
+  },
+  {
+    "topic": "audio-processing-errors",
+    "partitions": 2,
+    "replicationFactor": 1,
+    "config": {
+      "cleanup.policy": "delete",
+      "retention.ms": "1209600000"
+    },
+    "description": "Error and anomaly events for failed or stuck audio processing jobs."
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "type": "record",
+  "name": "AudioProcessingEvent",
+  "namespace": "com.selena.audio",
+  "fields": [
+    { "name": "eventId", "type": "string" },
+    { "name": "audioId", "type": "string" },
+    { "name": "timestamp", "type": "long" },
+    { "name": "eventType", "type": "string" },
+    { "name": "status", "type": "string" },
+    { "name": "userId", "type": ["null", "string"], "default": null },
+    { "name": "siteId", "type": ["null", "string"], "default": null },
+    { "name": "details", "type": ["null", {"type": "map", "values": "string"}], "default": null }
+  ]
+}
