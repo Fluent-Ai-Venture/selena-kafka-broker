@@ -1,0 +1,14 @@
+{
+  "name": "selena-kafka-broker",
+  "version": "1.0.0",
+  "description": "Kafka topic management and utilities for Selena Audio Processor.",
+  "main": "create-topics.js",
+  "scripts": {
+    "create-topics": "node create-topics.js"
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "dotenv": "^16.5.0",
+    "kafkajs": "^2.2.4"
+  }
+}
